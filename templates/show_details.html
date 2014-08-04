@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block body %}
+  <center><b>{{entry.title}}</b></center> </br>
+  <center><img src="{{entry.thumbnail}}" alt="NO IMAGE AVAILABLE."></center>
+</br>
+  <center>{{entry.content}}</center></br>
+</br>
+  <b>Movie Length:</b> {{entry.length}}</br>
+</br>
+  <b>Show Times:</b> {{entry.show_times}}</br>
+</br>
+  <b>Cinema:</b> {{entry.venue}}</br>
+</br>
+  <b>Ticket Price:</b> {{entry.ticket_price}}
+{% endblock %}
