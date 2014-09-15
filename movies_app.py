@@ -13,9 +13,6 @@ def load_movies():
     data = json.loads(json_data)
     return data['movies']
 
-#if __name__ == '__main__':
-#    app.run()
-
 @app.route('/')
 def show_entries():
     entries = load_movies()
@@ -25,11 +22,10 @@ def show_entries():
 def details():
     entries = load_movies()
     m = {"Title":"None", "Content":"none"}
-    #print(request.args["id"])
     for movie in entries:
         if str(movie["id"]) == str(request.args["id"]):
             m = movie
     return render_template('show_details.html', entry=m)
 
-if __name__=="__main__":
+if __name__== "__main__":
     app.run()
